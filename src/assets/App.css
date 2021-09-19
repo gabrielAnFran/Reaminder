@@ -1,0 +1,12 @@
+.conteudo {
+  display: flex;
+  background-color: #1a0000;
+}
+
+:root {
+  --primaria: #58a4b0;
+  --secundaria: #373f51;
+  --secundaria-ativa: #cccccc;
+  --fundo: #1a0000;
+  --fundo-detalhes: #ececec;
+}
