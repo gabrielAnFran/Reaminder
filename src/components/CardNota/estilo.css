@@ -21,6 +21,11 @@
   font-size: 1em;
 }
 
+.card-nota_data {
+  margin-top: 20px;
+  font-size: 1em;
+}
+
 .card-nota_titulo {
   font-size: 1.2em;
   margin-right: 12px;

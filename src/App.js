@@ -5,15 +5,27 @@ import "./assets/App.css";
 import './index.css';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      notas:[]
+    }
+  
+  }
+  criarNota(Titulo, Texto, Data){
+    const novaNota = {Titulo, Texto, Data};
+    const novoArrayNotas = [...this.state.notas, novaNota]
+    const novoEstado = {
+      notas:novoArrayNotas
+    }
+    this.setState(novoEstado)
+  }
   render(){
     return (
       <section className="conteudo">
-         <FormularioCadastro/>
-         <ListaDeNotas/>
-      </section>
-   
-  
-  
+         <FormularioCadastro criarNota = {this.criarNota.bind(this)}/>
+         <ListaDeNotas notas={this.state.notas}/>
+      </section>  
     );
   }
   
